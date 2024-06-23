@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Protest+Riot&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    body img{
+        @apply object-cover;
+    }
+    body a:hover{
+        @apply transition-all duration-300 text-orange-500;
+    }
+}
+@layer components {
+    .inputs {
+        @apply w-full block font-bold my-3;
+    }
+    .my-input {
+        @apply w-full rounded-lg h-10 font-medium;
+    }
+    .my-text-input{
+        @apply w-full rounded-lg h-36;
+    }
+
+    .showSide{
+        @apply fixed  bg-white z-50 w-2/3 transition-all duration-500;
+    }
+    .linkActive{
+        @apply  transition-all duration-100 left-0 backdrop-blur-lg;
+    }
+    .Best{
+        @apply w-full bg-slate-300 text-center pt-5 relative; 
+    }
+    .Best-list{
+        @apply  flex flex-col md:grid md:grid-cols-2  gap-10 mt-4 px-4 md:px-28;;
+    }
+    .Best-card{
+        @apply bg-white p-2 flex gap-4 text-justify rounded;
+
+    }
+    .dashed{
+        @apply line-through font-bold hidden text-gray-500 md:flex  md:text-base;
+    }
+    .newPrice{
+        @apply text-red-600 font-bold md:text-base;
+    }
+    .Pub{
+         @apply  my-5 rounded text-justify bg-white shadow-sm p-5;
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Pub2{
+         @apply bg-yellow-300 my-5 rounded text-justify p-5;
+    
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .Pub h4,.Pub2 h4{
+        @apply font-Lob text-orange-400;
+    }
+    .Pub h2,.Pub2 h2{
+        @apply text-2xl font-bold;
+    }
+    .Pub h1,.Pub2 h1{
+        @apply text-3xl font-bold;
+    }
+    .Prod-list{
+        @apply  my-5 gap-4 grid grid-cols-2  md:grid md:grid-cols-3 lg:grid-cols-4 md:px-32;
+    }
+    .Prod-list2{
+        @apply  my-5 gap-4 grid grid-cols-2  md:grid md:grid-cols-3 w-full md:px-20 ;
+    }
+    .Prod-card{
+        @apply bg-white relative; 
+    }
+    .Prod-card img{
+        @apply rounded;
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+    }
+    .Prod-card .desc{
+        @apply mb-4 md:mb-0 p-2;
+    }
+    .Prod-card .fa-heart{
+        @apply text-red-500;
+    }
+    .Prod-card h4{
+        @apply font-Lob text-orange-500;
+    }
+    .Prod-card h3{
+        @apply font-bold text-black md:text-xl;
+    }
+    .Prod-card .like{
+        @apply absolute;
+        top: 42%;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 2px;
+        color: black;
+    }
+    .swipe2{
+        width: 250px!important;
+        height: 290px !important;
+    }
+    .swipe2 img{
+        width: 100% !important;
+        height:62% !important;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .actions{
+        @apply  absolute block  md:hidden;
+    }
+    .Prod-card:hover .actions{
+        @apply  top-0 right-0 flex flex-col gap-3 bg-white p-2 rounded-b-full;
+    }  
+    .promo{
+        @apply absolute top-0 left-0 bg-red-600/70 rounded-tr-full rounded-br-full text-white p-1 font-bold;
+        width: 50%;
+    }
+    .addToCart{
+        @apply bg-orange-600 text-white absolute bottom-0 p-2 left-0 rounded transition-all duration-300;
+        width: 100%;
+    }
+    .AddToCart:hover{
+        @apply transition-all duration-300 bg-orange-400;
+    }
+    /*Announces*/
+    .announces{
+        @apply flex w-full gap-4 flex-col md:flex-row px-5 md:px-32 my-36;
+    }
+    .announce{
+        @apply relative w-full h-52;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    .anounceDesc{
+        @apply absolute top-8 left-2 ;
+    }
+    .anounceDesc h2{
+        @apply font-Lob;
+    }
+    .anounceDesc h1{
+        @apply font-Pop text-xl font-bold;
+    }
+    .footer-banner{
+        @apply px-7 md:px-36 w-full flex flex-col md:flex-row gap-3 ;
+    }
+    .banDesc{
+        @apply absolute top-5 md:top-14 left-10 text-white font-bold;
+    }
+    .recentBlogs{
+        @apply px-7 md:px-36 text-center mt-10 w-full;
+    }
+    .recentBlogs h1{
+        @apply font-Rob font-bold text-3xl text-black;
+    }
+    .recent-posts-list{
+        @apply flex flex-col md:flex-row gap-4 w-full mt-4;
+    }
+    .blog{
+        @apply w-full;
+    }
+    .blog-desc{
+        @apply p-5;
+    }
+    .blog-desc h1{
+        @apply text-2xl;
+    }
+    .desc-intro{
+        @apply flex gap-2;
+    }
+    .readmore{
+        @apply transition-all duration-300 p-4 text-green-500 bg-gray-100 rounded-md mt-2;
+    }
+    .readmore:hover{
+        @apply transition-all duration-300 text-white bg-orange-400;
+    }
+    .inUse{
+        @apply text-red-600;
+        text-decoration: underline;
+    }
+    /*CSS ACTIVE DROP DOWN*/
+    
+    
+}
