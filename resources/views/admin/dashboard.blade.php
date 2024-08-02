@@ -30,6 +30,7 @@
     <div class="card w-full md:w-6/12 text-center p-4">
         <h1 class="font-bold text-2xl text-lime-500">Top Produit</h1>
         <div class="w-full md:flex gap-2">
+            @if ($bestProd)
         <img src="/images/{{$bestProd->product_image}}" class="md:w-2/5 rounded-md" alt="">
             <div class="text-start p-10 text-lg">
                 <h3 class="font-bold text-orange-400">{{$bestProd->product_name}}</h3>
@@ -38,6 +39,7 @@
                     <b>Prix unitaire :</b>{{$bestProd->product_price}} XAF<br>
                 </p>
             </div>
+            @endif
     </div>
     </div>
     <br>

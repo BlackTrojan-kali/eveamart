@@ -63,7 +63,7 @@
    </div>
 </div>
 <script>
-    $(document).ready(function(){
+    $(function(){
         $(".validate").on("click",function(e){
             e.preventDefault()
             id = $(this).attr("id")

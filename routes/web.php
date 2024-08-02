@@ -23,12 +23,12 @@ Route::post("/adminAuth",[controllers\adminPanelController::class,"AdminAuth"])-
 Route::group(["middleware"=>"admin"],function(){
     Route::get('/admin/dashboard',[controllers\adminPanelController::class,"dashboardAdmin"])->name("dashboard");
     Route::post('/admin/logoutAdmin',[controllers\adminPanelController::class,"logout"])->name("adminlogout");
-    Route::get('/admin/blogs',[controllers\BlogController::class,"index"])->name("AdminBlogs");
-    Route::get('/admin/blogs/{id}',[controllers\BlogController::class,"UpdateBlog"])->name("UpdateBlog");
-    Route::get('/admin/createBlogs',[controllers\BlogController::class,"create"])->name("CreateBlogs");
-    Route::post('/admin/blogs/{id}',[controllers\BlogController::class,"Update"])->name("UpdateTheBlog");
-    Route::post('/admin/createB',[controllers\BlogController::class,"createBlog"])->name("PostBlog");
-    Route::delete('/admin/DeleteB/{id}',[controllers\BlogController::class,"Delete"])->name("DeleteBlog");
+    Route::get('/admin/blogs',[controllers\BlogsController::class,"index"])->name("AdminBlogs");
+    Route::get('/admin/blogs/{id}',[controllers\BlogsController::class,"UpdateBlog"])->name("UpdateBlog");
+    Route::get('/admin/createBlogs',[controllers\BlogsController::class,"create"])->name("CreateBlogs");
+    Route::post('/admin/blogs/{id}',[controllers\BlogsController::class,"Update"])->name("UpdateTheBlog");
+    Route::post('/admin/createB',[controllers\BlogsController::class,"createBlog"])->name("PostBlog");
+    Route::delete('/admin/DeleteB/{id}',[controllers\BlogsController::class,"Delete"])->name("DeleteBlog");
     Route::get("/admin/specificInvoices/",[controllers\InvoiceController::class,"specificIncoices"])->name("showSpecificIvoices");
     Route::get("/admin/specificInvoice/{id}",[controllers\InvoiceController::class,"showOne"])->name("oneInvoice");
     Route::get("/admin/downloadInvoic/{id}",[controllers\InvoiceController::class,"download"])->name("downloadInvoicePdf");

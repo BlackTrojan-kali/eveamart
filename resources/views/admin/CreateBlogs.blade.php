@@ -12,7 +12,6 @@
         </h2>
     </div>
 
-
     <div class="w-full md:w-11/12">
 
         <form action="{{route('PostBlog')}}" enctype="multipart/form-data" method="POST" class="w-full">
