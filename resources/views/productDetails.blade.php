@@ -8,7 +8,7 @@
       toastr.success("{{Session::get('success')}}")
   </script>
 @endif
-
+<script src="/js/jquery-3.7.1.min.js"></script>
     <div class="header-section relative bg-slate-300">
         <img src="/images/garlic-white.png" class="hidden md:block absolute left-64 top-16 w-48" alt="">
         <img src="/images/cauliflower.png" class="hidden md:block absolute right-64 top-16 w-24" alt="">
@@ -178,6 +178,7 @@
         </div>
     </div></div></div>
 <script>
+
     $(function(){
          $(".AddToCartQty").on("click",function(e){
         e.preventDefault()
