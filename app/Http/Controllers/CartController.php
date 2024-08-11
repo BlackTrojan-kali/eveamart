@@ -33,10 +33,10 @@ class CartController extends Controller
             "street" => "required|string|min:2",
             "payment"=>"required| string ",
         ]);
-        //try{
-          //  $payment = new Collect($request->phone,$total,$request->payment,);
-          //  $payment = $payment->pay();
-       if(1==1/*$payment->success*/){
+        try{
+            $payment = new Collect($request->phone,$total,$request->payment,'CM');
+            $payment = $payment->pay();
+       if($payment->success){
         
         $order = new Order();
         $order->order_code = mt_rand(0, 9999999999);
@@ -79,9 +79,9 @@ class CartController extends Controller
         
        }
 
-   // }catch(Exception $e){
-    //    return back()->withErrors("error payment");
-      // }
+   }catch(Exception $e){
+        return back()->withErrors("error payment");
+       }
     }
     public function storeOrder(Request $request,$TotalDelivery, $totalWeight){
         $total = Cart::total()+ $TotalDelivery;
